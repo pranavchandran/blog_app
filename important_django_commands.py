@@ -32,4 +32,22 @@ Created PublishedManager() filter the status published override
 Post.published.filter(title__startswith='Pranav')
 '''
 
+# for tagging 
+django-taggit
+
+# How to use
+from blog.models import Post
+>>> post = Post.objects.get(id=1)
+>>> post
+<Post: pranav new>
+>>> post.tags.add('music','jazz','django')
+>>> post.tags.all()
+<QuerySet [<Tag: jazz>, <Tag: music>, <Tag: django>]>
+>>> post.tags.remove('django')
+>>> post.tags.all()
+<QuerySet [<Tag: jazz>, <Tag: music>]>
+http://127.0.0.1:8000/admin/taggit/tag/
+
+
+
 
