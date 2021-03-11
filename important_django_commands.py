@@ -49,5 +49,7 @@ from blog.models import Post
 http://127.0.0.1:8000/admin/taggit/tag/
 
 
+pip install markdown==3.2.1
+
 
 
